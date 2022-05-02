@@ -23,26 +23,25 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    respond_to do |format|
-      if @user.save
-        # Tell the UserMailer to send a welcome email after save
-        UserMailer.with(user: @user).welcome_email.deliver_later
+    if @user.save
+      # Tell the UserMailer to send a welcome email after save
+      UserMailer.with(user: @user).welcome_email.deliver_later
 
-        # format.html { redirect_to(@user, notice: 'User was successfully created.') }
-        # format.json { render json: @user, status: :created, location: @user }
-        render json: {
-          code: 0, 
-          message: "Send e-mail successfully!"
-        }
-      else
-        # format.html { render action: 'new' }
-        # format.json { render json: @user.errors, status: :unprocessable_entity }
-        render json: {
-          code: 1, 
-          message: "Send e-mail unsuccessfully!"
-        }
-      end
+      # format.html { redirect_to(@user, notice: 'User was successfully created.') }
+      # format.json { render json: @user, status: :created, location: @user }
+      render json: {
+        code: 0, 
+        message: "Send e-mail successfully!"
+      }
+    else
+      # format.html { render action: 'new' }
+      # format.json { render json: @user.errors, status: :unprocessable_entity }
+      render json: {
+        code: 1, 
+        message: "Send e-mail unsuccessfully!"
+      }
     end
+    
   end
 
   # PATCH/PUT /users/1 or /users/1.json
