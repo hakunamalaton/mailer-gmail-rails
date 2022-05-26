@@ -1,21 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h1>Welcome to BK CSE Furniture, <%= @user.name %></h1>
-    <p>
-      You have successfully signed up to example.com,
-      your username is: <%= @user.login %>.<br>
-    </p>
-    <p>
-      To login to the site, just follow this link: <%= @url %>.
-    </p>
-    <p>Hello there, this is our image:</p>
 
-    <%= image_tag attachments['logo.png'].url, alt: 'My Photo' %>
+<head>
+	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	<link rel="stylesheet" href="./bootstrap.min.css">
+</head>
 
-    <p>Thanks for joining and have a great day!</p>
-  </body>
+<body style="background-color: #C9ECFF" class="d-flex justify-content-center">
+	<div class="col-5 bg-white px-0">
+		<img src="https://i.imgur.com/e0TtFDW.png" alt="" class="d-block w-100">
+		<div class="d-block p-3">
+			<h5>
+				Hello, <strong><%= @user.name %></strong>.
+			</h5>
+			<p>
+				Thank you! We've received your design. Someone from our team will contact you soon.
+			</p>
+		</div>
+		<div class="d-flex justify-content-center my-3">
+			<h5><strong>SOME OF OUR PRODUCTS</strong> </h5>
+		</div>
+		<div class="d-flex justify-content-around p-3">
+			<div class="col-6">
+				<img src="https://i.imgur.com/1YxkepH.jpg" alt="" class="d-block w-100">
+			</div>
+			<div class="col-6">
+				<h6>3 seater sofa PENNY</h6>
+				<div style="font-size: 14px">
+					Simplicity, sophistication, elegance and no less outstanding features of this sofa bearing the
+					eternal blood of Scandivian with color versions from dark to light in turn with Pastel on will bring
+					unmistakable colors and variety for each living space in your home.
+				</div>
+				<div class="d-flex" style="font-size: 14px">
+					<div class="d-flex align-items-center">
+						<strong>
+							600 USD
+						</strong>
+					</div>
+					<a href="https://ec-furniture-ui.herokuapp.com/menu/All" class="text-decoration-none">
+						<div class="btn btn-outline-primary rounded-0 mx-3 text-decoration-none" style="font-size: 14px">
+							BUY NOW
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="d-flex justify-content-around p-3">
+			<div class="col-6">
+				<h6>Maxine wooden bed</h6>
+				<div style="font-size: 14px">
+					The Miami upholstered bed uses white Oak imported from the US and high-grade moisture-resistant MDF
+					to create a solid product. Thanks to the warm tone of wood, the Miami bed brings a harmony, typical
+					of Nordic interior style.
+				</div>
+				<div class="d-flex" style="font-size: 14px">
+					<div class="d-flex align-items-center">
+						<strong>
+							1500 USD
+						</strong>
+					</div>
+					<a href="https://ec-furniture-ui.herokuapp.com/menu/All" class="text-decoration-none">
+						<div class="btn btn-outline-primary rounded-0 mx-3 text-decoration-none" style="font-size: 14px">
+							BUY NOW
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-6">
+				<img src="https://i.imgur.com/FsWEkHe.jpg" alt="" class="d-block w-100">
+			</div>
+		</div>
+		<img src="https://i.imgur.com/tcYW9Q1.png" alt="" class="d-block w-100">
+		<div style="background-color: #0795DF" class="p-3 text-dark">
+			<div class="d-flex justify-content-center">
+				<h5>
+					<strong>TRENDS DESIGNERS EXPECT TO SEE IN 2022</strong>.
+				</h5>
+			</div>
+			<div class="d-flex justify-content-center">
+				<p class="text-center" style="font-size: 14px">
+					While most people are making their 2022 resolutions, we’re looking toward this coming year with something else in mind: All the design and decor trends we can’t wait to see take over spaces everywhere in the new year. <br>
+					In anticipation (and to get ahead of the trends), we asked some of our favorite designers and creators to share their predictions for 2022 furniture and design trends. Keep reading for their guesses as to what silhouettes, materials, and styles we’ll be seeing next year.
+				</p>
+			</div>
+			<a href="https://ec-furniture-ui.herokuapp.com/" class="text-decoration-none">
+
+				<div class="d-flex justify-content-center text-decoration-none">
+					<div class="btn btn-dark rounded-0 mx-3 text-decoration-none" style="font-size: 14px">
+						VIEW MORE
+					</div>
+				</div>
+			</a>
+			
+		</div>
+		<div style="background-color: #0795DF">
+			<img src="https://i.imgur.com/rBx3d1J.png" alt="" class="d-block w-100">
+		</div>
+	</div>
+	<!-- <h1>Welcome to BK CSE Furniture, <%= @user.name %></h1>
+		<p>
+		You have successfully signed up to example.com,
+		your username is: <%= @user.login %>.<br>
+		</p>
+		<p>
+		To login to the site, just follow this link: <%= @url %>.
+		</p>
+		<p>Hello there, this is our image:</p>
+
+		<%= image_tag attachments['logo.png'].url, alt: 'My Photo' %>
+
+		<p>Thanks for joining and have a great day!</p> -->
+
+</body>
+
 </html>
